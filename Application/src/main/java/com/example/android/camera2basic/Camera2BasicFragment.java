@@ -496,6 +496,13 @@ public class Camera2BasicFragment extends Fragment
                 CameraCharacteristics characteristics
                         = manager.getCameraCharacteristics(cameraId);
 
+
+	         Log.d(TAG, "HEREEEEEEEEEEEEE");
+	         Log.d(TAG, characteristics.get(CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL).toString());
+	         Log.d(TAG, characteristics.get(CameraCharacteristics.LENS_FACING).toString());
+	         Log.d(TAG, characteristics.get(CameraCharacteristics.SENSOR_INFO_EXPOSURE_TIME_RANGE).toString());
+	         Log.d(TAG, "HEREEEEEEEEEEEEE");
+
                 // We don't use a front facing camera in this sample.
                 Integer facing = characteristics.get(CameraCharacteristics.LENS_FACING);
                 if (facing != null && facing == CameraCharacteristics.LENS_FACING_FRONT) {
